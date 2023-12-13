@@ -1,0 +1,13 @@
+section#contact{
+  min-height: 600px;
+}
+section#contact .wrap{
+  gap: 60px;
+  min-width: 1300px;
+}
+section#contact .wrap h2{
+  margin-bottom: 30px;
+}
+section#contact .wrap h2{
+  margin-bottom: 30px;
+}

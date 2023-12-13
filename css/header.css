@@ -1,0 +1,66 @@
+body{
+  background-color: #c9f2f06b;
+}
+
+header {
+  height: 80px;
+  background-color: rgba(255,255,255,0.8);
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  animation-name: down;
+  animation-direction: reverse;
+  animation-duration: 1s;
+  animation-timing-function: ease-in;
+}
+
+@keyframes down{
+  0%{
+    opacity: 1;
+    transform: translateY(0%);
+  }
+  100%{
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+}
+
+header .wrap {
+  height: 100%;
+}
+header .wrap h1 {
+   
+}
+header .wrap h1 a {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: bold;
+}
+header .wrap ul {
+  height: 100%;
+}
+header .wrap ul li {
+   
+}
+header .wrap ul li a {
+  display: flex;
+  line-height: 100px;
+  box-sizing: border-box;
+  align-items: center;
+  height: 100%;
+  padding: 0 20px;
+}
+header .wrap ul li a:hover{
+  color: #e68542;
+}
+header .wrap ul span {
+   
+  align-items: center;
+}
+header .wrap > a {
+  font-size: 0;
+  background-image: url(../img/menu.svg);
+  width: 30px;
+  height: 30px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

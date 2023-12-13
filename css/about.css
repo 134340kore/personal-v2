@@ -1,0 +1,54 @@
+main{
+
+}
+section#about{
+  background-color: white;
+  min-height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+section#about .wrap {
+   
+  min-width: 1300px;
+}
+section#about .wrap h2 {
+  margin-bottom: 30px;
+}
+section#about .wrap .int {
+   
+  padding-top: 30px;
+}
+section#about .wrap .int img {
+  width: 400px;
+}
+section#about .wrap .int ul {
+   
+  display: grid;
+  align-items: center;
+  grid-row-gap: 10px;
+}
+section#about .wrap .int ul h3 {
+  text-transform: capitalize;
+  font-weight: bold;
+  line-height: 1.8;
+}
+section#about .wrap .int ul li {
+   
+}
+section#about .wrap .int ul button { 
+  padding: 10px;
+  margin-right: 10px;
+  border: none;
+  background-color: #ffa567;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+section#about .wrap .int ul p {
+  line-height: 1.6;
+}
+section#about .wrap .int ul p span {
+  color: #e68542;
+  font-weight: bold;
+ }
