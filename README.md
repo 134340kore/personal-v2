@@ -29,7 +29,7 @@
 - 하이트진로 https://134340kore.github.io/pf5-Hitejinro/
 - 피죤 https://134340kore.github.io/pf0-pigeon/
 ## 스크린샷 또는 데모(포트폴리오 웹사이트의 스크린샷을 추가)
-![pf1]![image](https://github.com/134340kore/personal-v2/assets/150096390/77bfd231-85b9-4d32-a57b-b99adca3c259)
+![pf1](https://github.com/134340kore/personal-v2/assets/150096390/77bfd231-85b9-4d32-a57b-b99adca3c259)
 ![pf2](https://github.com/pageservice/personal/assets/71798491/1a7c723b-1e1b-4cb6-9f45-6b17b89482e9)
 ![pf3]
 ![pf4]
