@@ -13,7 +13,7 @@
     <!-- PC -->
     <meta name="description" content="대한민국 모든 수제맥주의 플랫폼">
     <meta name="keywords" content="개인포트폴리오 웹디자인 웹퍼블리셔 개인홈페이지">
-    <meta  name="og:image"  content="https://www.daleseo.com/html-meta/thumbnail.png" />
+    <meta name="og:image" content="https://134340kore.github.io/personal-v2/img/mobile.jpg">
     <!-- 메타 -->
     <title>PJH's Portfolio :: 예비웹퍼블리셔</title>
     <link rel="stylesheet" href="css/reset.css">
@@ -36,10 +36,63 @@
     <link rel="stylesheet" href="css/portfolio.css">
     <link rel="stylesheet" href="css/contact.css">
     <link rel="stylesheet" href="css/footer.css">
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" type="text/javascript"></script>
+    <script>
+        $().ready(function(){
+            AOS.init();
+        });
+    </script>
+    <!-- 마우스휠 -->
+    <script type="text/javascript">
+        window.onload = function () {
+            var elm = ".box";
+            $(elm).each(function (index) {
+                // 개별적으로 Wheel 이벤트 적용
+                $(this).on("mousewheel DOMMouseScroll", function (e) {
+                    e.preventDefault();
+                    var delta = 0;
+                    if (!event) event = window.event;
+                    if (event.wheelDelta) {
+                        delta = event.wheelDelta / 120;
+                        if (window.opera) delta = -delta;
+                    } 
+                    else if (event.detail)
+                        delta = -event.detail / 3;
+                    var moveTop = $(window).scrollTop();
+                    var elmSelecter = $(elm).eq(index);
+                    // 마우스휠을 위에서 아래로
+                    if (delta < 0) {
+                        if ($(elmSelecter).next() != undefined) {
+                            try{
+                                moveTop = $(elmSelecter).next().offset().top;
+                            }catch(e){}
+                        }
+                    // 마우스휠을 아래에서 위로
+                    } else {
+                        if ($(elmSelecter).prev() != undefined) {
+                            try{
+                                moveTop = $(elmSelecter).prev().offset().top;
+                            }catch(e){}
+                        }
+                    }
+                        
+                    // 화면 이동 0.8초(800)
+                    $("html,body").stop().animate({
+                        scrollTop: moveTop + 'px'
+                    }, {
+                        duration: 800, complete: function () {
+                        }
+                    });
+                });
+            });
+            $("main>section").unwrap();
+            $("section").css("height","100%");
+        }
+    </script>
 </head>
 <body>
     <!-- 상단영역 --> 
-    <header>
+    <header class="box">
         <div class="wrap flex between align-center">
             <h1 class="h2"><a href="#">希</a></h1>
             <ul class="flex">
@@ -55,7 +108,7 @@
         </div>
     </header>
     <!-- 타이틀 영역 -->
-    <div id="title" class="flex h100">
+    <div id="title" class="flex h100 box">
         <div class="wrap flex align-center column center">
             <h2 class="h3">Personality , Just do it , Hopefully</h2>
             <p class="h4">희망을 재단하지 않는 사람<br>웹퍼블리셔 박재희입니다.</p>
@@ -63,7 +116,7 @@
     </div>
     <!-- 메인 영역 -->
     <main>
-        <section id="about" class="paddingT20 paddingB20 h100">
+        <section id="about" class="paddingT20 paddingB20 h100 box">
             <div class="wrap paddingT20 paddingB20 marginT20 marginB20 align-center">
                 <h2 class="h2">ABOUT</h2>
                 <div class="int flex between paddingL20 paddingR20">
@@ -83,7 +136,7 @@
                     </ul>
                 </div>
         </section>
-        <section id="skill" class="paddingT20 paddingB20 h100 flex">
+        <section id="skill" class="paddingT20 paddingB20 h100 flex box">
             <div class="wrap paddingT20 paddingB20 marginT20 marginB20">
                 <h2 class="h2">SKILL</h2>
                 <p class="h4">"Just do it"</p>
@@ -192,7 +245,7 @@
                 </ul>
             </div>
         </section>
-        <section id="portfolio" class="paddingT20 paddingB20 h100 flex">
+        <section id="portfolio" class="paddingT20 paddingB20 h100 flex box">
             <div class="wrap paddingT20 paddingB20 paddingL20 paddingR20">
                 <h2 class="h2">PORTFOLIO</h2>
                 <p class="h6">[Hopefully]</p>
@@ -242,7 +295,7 @@
                 </div>
             </div>
         </section>
-        <section id="contact" class="paddingT20 paddingB20 h100 flex align-center">
+        <section id="contact" class="paddingT20 paddingB20 h100 flex align-center box">
             <div class="wrap flex column">
                 <div class="wrap">
                     <h2 class="h2">CONTACT</h2>
